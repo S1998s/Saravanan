@@ -27,4 +27,4 @@ jobs:
       run: box server start cfengine=lucee@5
 
     - name: Run tests
-      run: box testbox run server=http://localhost:8080
+      run: box testbox run server=http://localhost:8080/tests/runner.cfm
