@@ -3,7 +3,7 @@ component extends="testbox.system.BaseSpec" {
     function run() {
         describe("My First Test Suite", function() {
             it("should pass this test", function() {
-                expect(true).toBeTrue();
+                expect(false).toBeTrue();
             });
 
             it("should fail this test", function() {
