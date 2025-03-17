@@ -17,6 +17,9 @@ jobs:
         sudo apt-get update
         sudo apt-get install commandbox
 
+    - name: Verify CommandBox installation
+      run: box version
+
     - name: Install dependencies
       run: box install
 
