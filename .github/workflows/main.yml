@@ -10,8 +10,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up CommandBox
-      uses: ortus-solutions/commandbox-action@v1
+    - name: Install CommandBox
+      run: |
+        curl -fsSl https://downloads.ortussolutions.com/debs/gpg | sudo apt-key add -
+        echo "deb https://downloads.ortussolutions.com/debs/noarch /" | sudo tee -a /etc/apt/sources.list.d/commandbox.list
+        sudo apt-get update
+        sudo apt-get install commandbox
 
     - name: Install dependencies
       run: box install
