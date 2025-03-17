@@ -23,5 +23,8 @@ jobs:
     - name: Install dependencies
       run: box install
 
+    - name: Start CommandBox server
+      run: box server start cfengine=lucee@5
+
     - name: Run tests
-      run: box testbox run
+      run: box testbox run server=http://localhost:8080
