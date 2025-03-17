@@ -1,6 +1,6 @@
 {
     "name": "Saravanan",
     "dependencies": {
-        "testbox": "latest"
+        "testbox": "4.3.0"
     }
 }
